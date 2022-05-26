@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  </head>
+
+  <body>
+    <form action="" class="formularioGoogle" re>
+      <label for="nombre">Nombre</label>
+      <div class="inputNombres">
+        <input class="inputFormulario" type="text" id="nombre" placeholder="Nombre" required/>
+        <input class="inputFormulario" type="text" id="apellido" placeholder="Apellidos" required />
+      </div>
+
+      <label for="email" required>Nombre de usuario</label>
+      <input class="inputFormulario intputEmail" type="text" id="email" placeholder="@gmail.com" required/>
+
+      <label for="contrasena">Contraseña </label>
+      <input class="inputFormulario" type="password" id="contresena" required/>
+
+      <label for="contrasena">Confirma tu contraseña </label>
+      <input class="inputFormulario" type="password" id="contresena" required/>
+
+      <label for="fecha">Fecha de nacimiento</label>
+      <input class="inputFormulario" type="date" required/>
+
+      <label for="genero">Sexo</label>
+      <select name="genero" id="genero" onchange="">
+        <option value="0">Selecciona tu genero</option>
+        <option value="femenino">Femenino</option>
+        <option value="masculino">Masculino</option>
+        <option value="indefinido">Indefinido</option>
+      </select>
+      <div class="contenedorInputTelef">
+        <label for="genero">Teléfono móvil</label>
+        <br />
+        <input class="inputTelefono" id="phone" type="tel" name="phone" required/>
+      </div>
+      <br />
+      <label for="email">Tu dirección de correo electrónico actual</label>
+      <input class="inputFormulario" type="text" id="email" placeholder="" required />
+
+      <label for="pais" >Ubicación</label>
+      <select name="pais" id="pais" required>
+        <option value="españa">España</option>
+        <option value="mexico">México</option>
+        <option value="colombia">Colombia</option>
+        <option value="brasil">Brasil</option>
+      </select>
+
+      <div class="btnFormulario">
+        <input class="botonSiguiente" type="submit" value="Siguiente paso" ></input>
+      </div>
+    </form>
+
+    <script id="telefono" required>
+      const phoneInputField = document.querySelector("#phone");
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        initialCountry: "es",
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+      });
+    </script>
+  </body>
+</html>
